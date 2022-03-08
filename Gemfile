@@ -48,3 +48,5 @@ end
 
 
 gem "solargraph", "~> 0.44.3"
+
+gem "rest-client", "~> 2.1"
