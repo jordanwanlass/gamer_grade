@@ -9,7 +9,7 @@ module Api
         @header = { "Accept-Language" => "en-US,en;q=0.9", "Accept-Charset" => "application/x-www-form-urlencoded; charset=UTF-8",
                     , params: { 'start': 0, 'count': 10 } }
 
-        all_url = "https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/l8jGR7HcG5vMNsmmdQE4Mwgv3szls11ACmJuirQFQ9RZDiDeBmNOQCNpHBQhZ8BgBUzWbcOGe4s_Ug/ids"
+        all_url = "https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/#{@puuid}/ids"
         render json: build_small_matches(RestClient.get(all_url, @header)), status: 200
       end
 
