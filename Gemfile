@@ -50,3 +50,5 @@ end
 gem "solargraph", "~> 0.44.3"
 
 gem "rest-client", "~> 2.1"
+
+gem "rack-cors", "~> 1.1"
