@@ -7,8 +7,8 @@ module Api
       def index
         @puuid = params[:puuid]
         @header = { "Accept-Language" => "en-US,en;q=0.9", "Accept-Charset" => "application/x-www-form-urlencoded; charset=UTF-8",
-          "X-Riot-Token" => "RGAPI-fe6969a4-1e94-4e30-8686-dca3b7cd3ccd", params: { 'start': 0, 'count': 10 } }
-
+          , params: { 'start': 0, 'count': 10 } }
+#
         all_url = "https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/#{params[:puuid]}/ids"
         render json: build_small_matches(RestClient.get(all_url, @header)), status: 200
       end
